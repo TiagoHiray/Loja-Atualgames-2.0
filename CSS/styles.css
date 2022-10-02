@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box
+}
+
+body{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16;
+}
+
+header{
+    display:flex;
+    height:100px;
+    width: 1200px;
+    border: 1px solid #CCC;
+    border-radius: 50px;
+    margin: 0 auto;
+    padding: 10px;
+    align-self: center;
+    align-items: center;
+    background-color: #b5d214;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+   
+header > img{
+    margin: top 10px;
+}
+
+li{
+    list-style: none;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+.sub-menu{
+    display:none;
+}
+
+.navbar ul li:hover .sub-menu{
+    display: block;
+    border-radius: 10px;
+    position:absolute;
+    background-color: transparent;    
+    margin-left: 200px;
+}
+
+.navbar ul li:hover .sub-menu ul{   
+    display:block;
+    margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 2px inset #b5d214;
+    background: transparent;  
+    border-radius: 10px;
+    text-align: left;  
+}
+
+
+.navbar{
+    display:flex;
+    min-width: 70px;    
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap:60px;
+}
+
+.nav-branding{
+    font-size: 2rem;
+}
+
+.nav-link{
+    transition:0.7s ease;
+}
+
+.nav-link:hover{
+    color: dodgerblue
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width:25px;
+    height:3px;
+    padding: 1px;
+    margin:5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media(max-width:768px){}
+    .hamburguer{
+        display:block;
+}
+
+.hamburguer.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburguer.active .bar:nth-child(1){
+    transform: translateY(8.25px) rotate(45deg);
+}
+
+.hamburguer.active .bar:nth-child(3){
+    transform: translateY(-8.25px) rotate(-45deg);
+}
+
+.nav-menu{
+    position:fixed;
+    margin-left: 200px;
+    padding: 10px;
+    left:-100%;
+    top: 100px;
+    gap:0;
+    border-radius: 10px;
+    border:2px solid #b5d214;
+    flex-direction: column;
+    background-color: white;  
+    height: 200px;  
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+
+}
+
+.nav-item{
+    margin:16 px 0;
+    font-size: 18px;
+}
+
+.nav-menu.active{
+    left:0;
+}
+
+/*Busca*/
+form.searchbar input[type=text] {
+    padding-left: 20px;
+    font-size: 18px;
+    align-self: auto;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 35px;
+    border: 1px solid white;
+    height: 50px;
+    width: 600px;
+    background: white;
+    margin-top: 0px;    
+    margin-left: 20px;
+    outline-width: 0.2px;
+    outline-color: white;
+    outline-offset: 1mm;
+    }
+  
+    form.searchbar button {
+    width: 10px;
+    padding: 0.3%;
+    background-color: white;
+    color: black;
+    font-size: 80%;
+    border: 1px solid white;  
+    border-left: none;
+    cursor: pointer;
+    margin-left: -40px;
+  }
+  
+  form.searchbar::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Icones */
+  @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+  a, a:hover {
+      text-decoration: none;
+  }
+  
+  .socialbtns, .socialbtns ul, .socialbtns li {
+    margin: 0;
+    padding: 5px;
+  }
+  
+  .socialbtns li {
+      list-style: none outside none;
+      display: inline-block;
+      margin-right: 25px;
+      margin-bottom: 10px;
+  }
+  
+  .socialbtns .fa {
+      width: 40px;
+      height: 28px;
+      color: white;
+      padding-top: 12px;    
+      border-radius: 22px;
+      -moz-border-radius: 22px;
+      -webkit-border-radius: 22px;
+      -o-border-radius: 22px;
+      font-size: 25px;
+  }
+  
+  .socialbtns .fa:hover {
+      color: #76871b;
+      background-color: #b5d214;
+  }
+  
+  
+hr{
+    height:70px;
+    width:2px;
+    margin-top: 5px ;
+    margin-left: 100px;
+    border-width:0;
+    color:#000;
+    background-color:white;
+}
+/* Containers */
+.containergrande{
+    width: 90vw;
+    height: 200vh;
+    border-radius: 70px;
+    background: #f1f1f1;
+    margin-left: 60px;
+    margin-right: 50px;
+    margin-top: 100px;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: auto;
+    }
+
+
